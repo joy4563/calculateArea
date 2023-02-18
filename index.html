@@ -12,12 +12,19 @@
       src="https://kit.fontawesome.com/0415b5453e.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- custom css -->
+    <style>
+      .custom-height{
+        height: 40vh;
+      }
+    </style>
   </head>
   <body>
     <!-- header section -->
     <header class="container mx-auto">
       <section
-        class="flex justify-between items-center py-4 px-8 bg-[#1090d81a] rounded-md"
+        class="flex justify-between items-center py-4 px-8 bg-[#1090d81a] rounded-md mb-10"
       >
         <h1>
           <span class="font-bold text-4xl text-[#111111cc]">Interactive</span>
@@ -26,7 +33,10 @@
             >Geometry Genious</span
           >
         </h1>
-        <button class="bg-[#1090D8] rounded-lg text-white py-2 px-6">
+        <button
+          id="blog-btn"
+          class="bg-[#1090D8] rounded-lg text-white py-2 px-6"
+        >
           Blog
         </button>
       </section>
@@ -34,22 +44,22 @@
 
     <!-- main section -->
 
-    <main class="container mx-auto mt-10">
-      <section class="flex flex-col-reverse lg:flex-row">
+    <main class="container mx-auto ">
+      <section class="flex flex-col-reverse lg:flex-row ">
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:w-3/4 gap-4"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:w-3/4 gap-4 "
         >
           <!-- triangle part -->
           <div
-            class="flex flex-col items-center rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
+            class="flex flex-col items-center justify-end rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
           >
             <img class="mb-9" src="images/triangle.png" alt="" />
             <h1 class="mb-2 text-[#414141] text-xl font-bold">Triangle</h1>
             <h3>Area (A) =0.5 x b x h</h3>
-            <div class="flex gap-1 w-5/6 mt-4 mb-9">
+            <div class="flex items-center gap-1 w-5/6 mt-4 mb-9">
               <input
                 id="triangle-base"
-                class="w-3/4 bg-[#f1f1f1] rounded-md pl-2"
+                class="w-3/4 bg-[#f1f1f1] rounded-md p-1"
                 type="text"
                 name=""
                 placeholder="b"
@@ -57,7 +67,7 @@
               <h3>cm</h3>
               <input
                 id="triangle-height"
-                class="w-3/4 bg-[#f1f1f1] rounded-md pl-2"
+                class="w-3/4 bg-[#f1f1f1] rounded-md p-1"
                 type="text"
                 name=""
                 placeholder="h"
@@ -75,32 +85,31 @@
           <!-- rectangle part -->
 
           <div
-            class="flex flex-col items-center rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
+            class="flex flex-col items-center justify-end rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
           >
             <img class="mb-9" src="images/rectangle.png" alt="" />
             <h1 class="mb-2 text-[#414141] text-xl font-bold">Rectangle</h1>
             <h3>Area (A) = w x l</h3>
-            <div class="flex gap-1 w-5/6 mt-4 mb-9">
-              <input 
-               id="rectangle-width"
-                class="w-3/4 bg-[#f1f1f1] rounded-md pl-2"
+            <div class="flex items-center gap-1 w-5/6 mt-4 mb-9">
+              <input
+                id="rectangle-width"
+                class="w-3/4 bg-[#f1f1f1] rounded-md p-1"
                 type="text"
                 name=""
-               
                 placeholder="w"
               />
               <h3>cm</h3>
               <input
-              id="rectangle-length"
-                class="w-3/4 bg-[#f1f1f1] rounded-md pl-2"
+                id="rectangle-length"
+                class="w-3/4 bg-[#f1f1f1] rounded-md p-1"
                 type="text"
                 name=""
-                
                 placeholder="l"
               />
               <h3>cm</h3>
             </div>
-            <button id="rectangle-btn"
+            <button
+              id="rectangle-btn"
               class="bg-[#1090D8] rounded-md w-full py-3 text-center text-white font-bold text-2xl"
             >
               Calculate
@@ -108,14 +117,14 @@
           </div>
           <!-- parellelogram -->
           <div
-            class="flex flex-col items-center rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
+            class="flex flex-col items-center justify-end rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
           >
             <img class="mb-9" src="images/parallelogram.png" alt="" />
             <h1 class="mb-2 text-[#414141] text-xl font-bold">Parellelogram</h1>
             <h3>Area (A) =b x h</h3>
-            <div class="flex gap-1 w-5/6 mt-4 mb-9">
+            <div class="flex items-center gap-1 w-5/6 mt-4 mb-9">
               <input
-                class="w-3/4 bg-[#f1f1f1] rounded-md pl-2"
+                class="w-3/4 bg-[#f1f1f1] rounded-md p-1"
                 type="text"
                 name=""
                 id="parellelogram-base"
@@ -123,7 +132,7 @@
               />
               <h3>cm</h3>
               <input
-                class="w-3/4 bg-[#f1f1f1] rounded-md pl-2"
+                class="w-3/4 bg-[#f1f1f1] rounded-md p-1"
                 type="text"
                 name=""
                 id="parellelogram-height"
@@ -131,7 +140,8 @@
               />
               <h3>cm</h3>
             </div>
-            <button id="parellelogram-btn"
+            <button
+              id="parellelogram-btn"
               class="bg-[#1090D8] rounded-md w-full py-3 text-center text-white font-bold text-2xl"
             >
               Calculate
@@ -139,7 +149,7 @@
           </div>
           <!-- rhombus -->
           <div
-            class="flex flex-col items-center rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
+            class="flex flex-col items-center justify-end rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
           >
             <img class="mb-9" src="images/rhombus.png" alt="" />
             <h1 class="mb-2 text-[#414141] text-xl font-bold">Rhombus</h1>
@@ -147,9 +157,9 @@
               Area (A) =0.5 x <span>d<sub>1</sub></span> x
               <span>d<sub>2</sub></span>
             </h3>
-            <div class="flex gap-1 w-5/6 mt-4 mb-9">
+            <div class="flex items-center gap-1 w-5/6 mt-4 mb-9">
               <input
-                class="w-3/4 bg-[#f1f1f1] rounded-md pl-2"
+                class="w-3/4 bg-[#f1f1f1] rounded-md p-1"
                 type="text"
                 name=""
                 id="rhombus-d1"
@@ -157,7 +167,7 @@
               />
               <h3>cm</h3>
               <input
-                class="w-3/4 bg-[#f1f1f1] rounded-md pl-2"
+                class="w-3/4 bg-[#f1f1f1] rounded-md p-1"
                 type="text"
                 name=""
                 id="rhombus-d2"
@@ -165,7 +175,8 @@
               />
               <h3>cm</h3>
             </div>
-            <button id="rhombus-btn"
+            <button
+              id="rhombus-btn"
               class="bg-[#1090D8] rounded-md w-full py-3 text-center text-white font-bold text-2xl"
             >
               Calculate
@@ -173,14 +184,14 @@
           </div>
           <!-- pentagon -->
           <div
-            class="flex flex-col items-center rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
+            class="flex flex-col items-center justify-end rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
           >
             <img class="mb-9" src="images/pentagon.png" alt="" />
             <h1 class="mb-2 text-[#414141] text-xl font-bold">Pentagon</h1>
             <h3>Area (A) =0.5 x p x b</h3>
-            <div class="flex gap-1 w-5/6 mt-4 mb-9">
+            <div class="flex items-center gap-1 w-5/6 mt-4 mb-9">
               <input
-                class="w-3/4 bg-[#f1f1f1] rounded-md pl-2"
+                class="w-3/4 bg-[#f1f1f1] rounded-md p-1"
                 type="text"
                 name=""
                 id="pentagon-p"
@@ -188,7 +199,7 @@
               />
               <h3>cm</h3>
               <input
-                class="w-3/4 bg-[#f1f1f1] rounded-md pl-2"
+                class="w-3/4 bg-[#f1f1f1] rounded-md p-1"
                 type="text"
                 name=""
                 id="pentagon-b"
@@ -196,7 +207,8 @@
               />
               <h3>cm</h3>
             </div>
-            <button id="pentagon-btn"
+            <button
+              id="pentagon-btn"
               class="bg-[#1090D8] rounded-md w-full py-3 text-center text-white font-bold text-2xl"
             >
               Calculate
@@ -204,7 +216,7 @@
           </div>
           <!-- ellipse -->
           <div
-            class="flex flex-col items-center rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
+            class="flex flex-col items-center justify-end rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
           >
             <img class="mb-9" src="images/ellipse.png" alt="" />
             <h1 class="mb-2 text-[#414141] text-xl font-bold">Ellipse</h1>
@@ -215,9 +227,9 @@
               /></span>
               ab
             </h3>
-            <div class="flex gap-1 w-5/6 mt-4 mb-9">
+            <div class="flex items-center gap-1 w-5/6 mt-4 mb-9">
               <input
-                class="w-3/4 bg-[#f1f1f1] rounded-md pl-2"
+                class="w-3/4 bg-[#f1f1f1] rounded-md p-1"
                 type="text"
                 name=""
                 id="ellipse-a"
@@ -225,7 +237,7 @@
               />
               <h3>cm</h3>
               <input
-                class="w-3/4 bg-[#f1f1f1] rounded-md pl-2"
+                class="w-3/4 bg-[#f1f1f1] rounded-md p-1"
                 type="text"
                 name=""
                 id="ellipse-b"
@@ -233,7 +245,8 @@
               />
               <h3>cm</h3>
             </div>
-            <button id="ellipse-btn"
+            <button
+              id="ellipse-btn"
               class="bg-[#1090D8] rounded-md w-full py-3 text-center text-white font-bold text-2xl"
             >
               Calculate
@@ -242,11 +255,19 @@
         </div>
 
         <!-- update field -->
-        <div id="area-container" class="w-3/12 border border-[#1111111a]">
-          <h1 class="underline">Area calculation</h1>
+        <div class="sm:w-6/12 lg:w-1/4 border border-[#1111111a]  p-3 lg:ml-3 rounded-md custom-height mb-10"> 
+          <h1 class="underline text-center font-bold text-base mb-3 ">
+            Area Calculation
+          </h1>
+
+          <div id="area-container" class="">
+            <div id="area-list"></div>
+          </div>
         </div>
       </section>
     </main>
+
+
     <!-- Js file add -->
     <script src="geometry.js"></script>
   </body>
