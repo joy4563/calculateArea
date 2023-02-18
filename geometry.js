@@ -117,3 +117,24 @@ document.getElementById("ellipse-btn").addEventListener("click", function () {
 document.getElementById("blog-btn").addEventListener("click", function () {
   window.location.href = "my-blog.html";
 });
+
+// Change the background color
+
+function changeBackground(traingleField) {
+  var letters = "0123456789ABCDEF";
+  var color = "#";
+
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+
+  const field = document.getElementById(traingleField);
+  field.style.background = color;
+}
+
+// reset the background color
+
+function resetColor(traingleField) {
+  const field = document.getElementById(traingleField);
+  field.style.background = "white";
+}

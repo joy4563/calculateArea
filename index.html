@@ -15,7 +15,7 @@
 
     <!-- custom css -->
     <style>
-      .custom-height{
+      .custom-height {
         height: 40vh;
       }
     </style>
@@ -44,13 +44,16 @@
 
     <!-- main section -->
 
-    <main class="container mx-auto ">
-      <section class="flex flex-col-reverse lg:flex-row ">
+    <main class="container mx-auto">
+      <section class="flex flex-col-reverse lg:flex-row">
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:w-3/4 gap-4 "
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:w-3/4 gap-4"
         >
           <!-- triangle part -->
           <div
+            id="triangle"
+            onmouseenter="changeBackground('triangle')"
+            onmouseleave="resetColor('triangle')"
             class="flex flex-col items-center justify-end rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
           >
             <img class="mb-9" src="images/triangle.png" alt="" />
@@ -85,6 +88,9 @@
           <!-- rectangle part -->
 
           <div
+            id="rectangle"
+            onmouseenter="changeBackground('rectangle')"
+            onmouseleave="resetColor('rectangle')"
             class="flex flex-col items-center justify-end rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
           >
             <img class="mb-9" src="images/rectangle.png" alt="" />
@@ -117,6 +123,9 @@
           </div>
           <!-- parellelogram -->
           <div
+            id="parellelogram"
+            onmouseenter="changeBackground('parellelogram')"
+            onmouseleave="resetColor('parellelogram')"
             class="flex flex-col items-center justify-end rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
           >
             <img class="mb-9" src="images/parallelogram.png" alt="" />
@@ -149,6 +158,9 @@
           </div>
           <!-- rhombus -->
           <div
+            id="rhombus"
+            onmouseenter="changeBackground('rhombus')"
+            onmouseleave="resetColor('rhombus')"
             class="flex flex-col items-center justify-end rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
           >
             <img class="mb-9" src="images/rhombus.png" alt="" />
@@ -184,6 +196,9 @@
           </div>
           <!-- pentagon -->
           <div
+            id="pentagon"
+            onmouseenter="changeBackground('pentagon')"
+            onmouseleave="resetColor('pentagon')"
             class="flex flex-col items-center justify-end rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
           >
             <img class="mb-9" src="images/pentagon.png" alt="" />
@@ -216,6 +231,9 @@
           </div>
           <!-- ellipse -->
           <div
+            id="ellipse"
+            onmouseenter="changeBackground('ellipse')"
+            onmouseleave="resetColor('ellipse')"
             class="flex flex-col items-center justify-end rounded-md border border-[#1111111a] py-10 px-9 bg-[#FFFFFF]"
           >
             <img class="mb-9" src="images/ellipse.png" alt="" />
@@ -255,8 +273,10 @@
         </div>
 
         <!-- update field -->
-        <div class="sm:w-6/12 lg:w-1/4 border border-[#1111111a]  p-3 lg:ml-3 rounded-md custom-height mb-10"> 
-          <h1 class="underline text-center font-bold text-base mb-3 ">
+        <div
+          class="sm:w-6/12 lg:w-1/4 border border-[#1111111a] p-3 lg:ml-3 rounded-md custom-height mb-10"
+        >
+          <h1 class="underline text-center font-bold text-base mb-3">
             Area Calculation
           </h1>
 
@@ -266,7 +286,6 @@
         </div>
       </section>
     </main>
-
 
     <!-- Js file add -->
     <script src="geometry.js"></script>
