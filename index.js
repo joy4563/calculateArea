@@ -14,7 +14,6 @@ function getInputValue(input1Id, input2Id) {
 
   if (isNaN(input1) || isNaN(input2) || input1 < 0 || input2 < 0) {
     alert("Input a valid number");
-    // process.abort();
   } else {
     return input1 * input2;
   }
